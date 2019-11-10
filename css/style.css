@@ -42,13 +42,13 @@ button:focus { outline:0; }
   padding-top: 80px;
   background-color: #fcfcfc;
 }
+
+.section-header-first{
+  padding-top: 160px;
+}
 .section-body{
   padding:64px 0 80px 0;
   background-color: #fcfcfc;
-}
-
-.section-header:first-child{
-  padding-top: 160px;
 }
 
 /*--------------------------------- /section --------------------------------*/
@@ -63,14 +63,6 @@ button:focus { outline:0; }
 
 .text-center{
   text-align: center;
-}
-
-.flex{
-  display: flex;
-}
-
-.flex-inline{
-  display: inline-flex;
 }
 
 
@@ -452,40 +444,136 @@ button:focus { outline:0; }
   border: 1px solid #0C223F; 
 }
 
+ /* --------------------------------
+ *          what i can do
+ *--------------------------------*/
 
-/* .about{
+ .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*
+=================
+Circle Graph using (https://github.com/rendro/easy-pie-chart)
+================
+*/
+.circle-graph p {
+	text-align: center;
+  padding: 10px;
+  z-index: 100;
+} 
+
+.graph-one {
+  height: 300px; /* set height for postioning */
+}
+
+.circle-graph-container {
   position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-align-items: center;   
-  -ms-align-items    : center;  
-  align-items        : center;
 }
 
-.about-me{
-  width: 380px;
-  height: auto;
-  object-fit: contain;
-}
-
-.about-text{
-
-  height: auto;
-  font-size: 1.6rem;
-  padding-left: 30px;
-  width: 60%;
-  color: #0C223F;
-}
-.resume-button-container{
+canvas {
   position: absolute;
-  bottom: 0;
-  left: 550px;
+  top: 120px;
+}
+
+.circle-graph {
+	margin: 20px;
+  float: left;
+}
+
+/*
+=================
+Bar Graph 
+================
+*/
+.bar-graph-container {
+  border-left: 4px solid #000;
+  border-bottom: 4px solid #000; 
+  width: 60%;
+  overflow: hidden;
 
 }
 
-.resume-button{
-  background-color: #fcfcfc;
-} */
+.bar-graph-container p {
+  padding: 20px;
+  color: #fff;
+}
+
+@-webkit-keyframes slide-left {
+   0% {
+     -webkit-transform: translateX(-200%);
+  }
+  70% {
+    -webkit-transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-200%);
+  }
+  
+  70% {
+    -webkit-transform: translateX(2%);
+  }
+  
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+.bar-container {
+ 	background-color: rgba(231, 184, 239, 0.6);   
+}
+
+.html {
+  width: 85%;
+  background-color: #a378aa;
+  animation: slide-left 0.9s ease-in-out 1s both;
+  -webkit-animation: slide-left 0.9s ease-in-out 1s both;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.css {
+  width: 80%;
+  background-color: #a378aa;
+  animation: slide-left 1s ease-in-out 1s both;
+ -webkit-animation: slide-left 1s ease-in-out 1s both;
+   animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.js {
+  width: 60%;
+  background-color: #a378aa;
+  animation: slide-left 1s ease-in-out 1s both;
+  -webkit-animation: slide-left 1s ease-in-out 1s both;
+   animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.php {
+  width: 40%;
+  background-color: #a378aa;
+  animation: slide-left 1s ease-in-out 1s both;
+  -webkit-animation: slide-left 1s ease-in-out 1s both;
+   animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.drupal {
+  width: 62%;
+  background-color: #a378aa;
+  animation: slide-left 1s ease-in-out 1s both;
+  -webkit-animation: slide-left 1s ease-in-out 1s both;
+   animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+} 
 
 
 

@@ -17,7 +17,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-<div class="container-floid">
+<div class="container-fluid">
 <!--------------------------------------
 *
 *          navigation-selection           
@@ -50,28 +50,30 @@
 *          heroimg-selection           
 *                
 ---------------------------------------->
+<div class="row">
 
-<div class="hero_imgBox">
-    <p class="hero-lyer-text">
-        I'm Taichi Tsujioka.<br>
-        Japanese Front-end Developer,<br>
-        based in Vancouver.<br>
-    </p>
+  <div class="hero_imgBox">
+      <p class="hero-lyer-text">
+          I'm Taichi Tsujioka.<br>
+          Japanese Front-end Developer,<br>
+          based in Vancouver.<br>
+      </p>
 
-    <div class="main_img">
-      <img src="img/hero-img1.jpg" alt="" class="fliter-img">
-    </div>
+      <div class="main_img">
+        <img src="img/hero-img1.jpg" alt="" class="fliter-img">
+      </div>
 
-    <div class="main_img">
-        <img src="img/hero-img2.jpg" alt="" class="fliter-img">
-    </div>
+      <div class="main_img">
+          <img src="img/hero-img2.jpg" alt="" class="fliter-img">
+      </div>
 
-    <div class="main_img">
-        <img src="img/hero-img3.jpg" alt="" class="fliter-img">
-    </div>
+      <div class="main_img">
+          <img src="img/hero-img3.jpg" alt="" class="fliter-img">
+      </div>
 
-    <a href="#" class="scroll-button"><span></span><span></span><span></span></a>
+      <a href="#" class="scroll-button"><span></span><span></span><span></span></a>
   </div>
+</div>
 
 
 <!--------------------------------------
@@ -159,7 +161,7 @@
 
   <!-- about-title -->
   <div class="row">
-    <div class="col-xs-12 section-header">
+    <div class="col-xs-12 section-header section-header-first">
         <h2>About</h2>
     </div>
   </div>
@@ -189,15 +191,84 @@
   </div>
 
 </div>
-
-
-
-
-
-
 <!--------------------------------------
 *
 *            /about-selection           
+*                
+---------------------------------------->
+
+<!--------------------------------------
+*
+*            what i can do           
+*                
+---------------------------------------->
+
+ <!-- what i can do-title -->
+<div class="row">
+  <div class="col-xs-12 section-header">
+      <h2>WAHT I CAN DO</h2>
+  </div>
+</div>
+
+<!-- what i can do-graph -->
+<div class="row section-body">
+  <div class="col">
+    <div class="container">
+      <section class="graph-one">
+        <h2>Circles</h2>
+        <div class="circle-graph-container">
+        <div class="circle-graph" data-percent="80"><p>HTML</p></div>
+        <div class="circle-graph" data-percent="75"><p>CSS</p></div>
+        <div class="circle-graph" data-percent="55"><p>JavaScript</p></div>
+        <div class="circle-graph" data-percent="40"><p>Drupal</p></div>
+        </div>
+      </section>
+
+      <section class="graph-two">
+      <h2>Bar Graph</h2>
+      <div class="bar-graph-container">
+        <div class="bar-container">
+         <div class="html">
+           <p>HTML</p>
+          </div>
+        </div>
+        
+       <div class="bar-container">
+         <div class="css">
+           <p>CSS</p>
+          </div>
+        </div>
+        
+        <div class="bar-container">
+         <div class="js">
+           <p>JavaScript</p>
+          </div>
+        </div>
+         
+        <div class="bar-container">
+         <div class="php">
+           <p>PHP</p>
+          </div>
+        </div>
+        
+        <div class="bar-container">
+         <div class="drupal">
+           <p>Drupal</p>
+          </div>
+        </div>
+      </div>
+            
+     
+    </section> 
+    
+    </div>
+    
+</div>
+</div>
+
+<!--------------------------------------
+*
+*            /what i can do           
 *                
 ---------------------------------------->
 
@@ -206,6 +277,19 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+  $('.circle-graph').easyPieChart({
+    scaleColor: false,
+    lineWidth: 20,
+    lineCap: 'butt',
+    barColor: '#a378aa',
+    trackColor: '#e7b8ef' ,
+    size: 150,
+    animate: 800
+  });
+});
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
