@@ -29,7 +29,26 @@ h2{
     text-transform: uppercase;
    }
 
+h3{
+  font-size: 1.6rem;
+  color: #0C223F;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 32px;
+  margin-bottom: 0;
+}
+
+h4{
+ font-size: 1.4rem;
+ color: #0C223F;
+ text-align: left;
+ padding-bottom: 24px;
+ margin-bottom: 0;
+}
+
 button:focus { outline:0; }
+
+
 
 
 
@@ -374,6 +393,7 @@ button:focus { outline:0; }
 }
 
 .button-text{
+  font-size: 1.4rem;
   color: #ffc41c;
   font-family: 'Oswald', sans-serif;
 }
@@ -448,56 +468,35 @@ button:focus { outline:0; }
  *          what i can do
  *--------------------------------*/
 
- .container {
-  width: 80%;
-  margin: 0 auto;
-}
+ /* circle graph */
 
-/*
-=================
-Circle Graph using (https://github.com/rendro/easy-pie-chart)
-================
-*/
-.circle-graph p {
-	text-align: center;
-  padding: 10px;
-  z-index: 100;
-} 
-
-.graph-one {
-  height: 300px; /* set height for postioning */
-}
-
-.circle-graph-container {
+.circle-graph{
   position: relative;
+  text-align: center;
 }
 
-canvas {
+.circle-graph > p{
   position: absolute;
-  top: 120px;
+  color: #0C223F;
+  font-size: 1.6rem;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
-.circle-graph {
-	margin: 20px;
-  float: left;
+.circle-title{
+  margin-left: 6.756%;
 }
 
-/*
-=================
-Bar Graph 
-================
-*/
+/* bar-graph */
+
 .bar-graph-container {
-  border-left: 4px solid #000;
-  border-bottom: 4px solid #000; 
-  width: 60%;
   overflow: hidden;
-
 }
 
 .bar-graph-container p {
-  padding: 20px;
-  color: #fff;
+  padding: 10px;
 }
 
 @-webkit-keyframes slide-left {
@@ -527,57 +526,129 @@ Bar Graph
 }
 
 .bar-container {
- 	background-color: rgba(231, 184, 239, 0.6);   
+   background-color: #AEC4E1;   
 }
 
-.html {
-  width: 85%;
-  background-color: #a378aa;
+.Reactjs {
+  width: 80%;
+  background-color: #0C223F;
   animation: slide-left 0.9s ease-in-out 1s both;
   -webkit-animation: slide-left 0.9s ease-in-out 1s both;
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
 
-.css {
-  width: 80%;
-  background-color: #a378aa;
+.RubyOnRails {
+  width: 60%;
+  background-color: #0C223F;
   animation: slide-left 1s ease-in-out 1s both;
  -webkit-animation: slide-left 1s ease-in-out 1s both;
    animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
 
-.js {
-  width: 60%;
-  background-color: #a378aa;
+.Bootstrap {
+  width: 80%;
+  background-color: #0C223F;
   animation: slide-left 1s ease-in-out 1s both;
   -webkit-animation: slide-left 1s ease-in-out 1s both;
    animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
 
-.php {
-  width: 40%;
-  background-color: #a378aa;
+.PhotoShop {
+  width: 75%;
+  background-color: #0C223F;
   animation: slide-left 1s ease-in-out 1s both;
   -webkit-animation: slide-left 1s ease-in-out 1s both;
    animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.1s;
 }
 
-.drupal {
-  width: 62%;
-  background-color: #a378aa;
+.Illustrator {
+  width: 70%;
+  background-color: #0C223F;
   animation: slide-left 1s ease-in-out 1s both;
   -webkit-animation: slide-left 1s ease-in-out 1s both;
    animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.2s;
 } 
 
+.WebDesign {
+  width: 80%;
+  background-color: #0C223F;
+  animation: slide-left 1s ease-in-out 1s both;
+  -webkit-animation: slide-left 1s ease-in-out 1s both;
+   animation-delay: 0.1s;
+  -webkit-animation-delay: 0.3s;
+} 
 
+.bar-title{
+  padding-top: 32px;
+}
 
+.bar-list{
+  padding-bottom: 32px;
+}
+.bar-list:last-of-type{
+  padding-bottom: 0;
+}
 
+.bar{
+  margin-bottom: 0;
+}
 
+ /* --------------------------------
+ *          contact
+ *--------------------------------*/
 
+.contact{
+  text-align: center;
+  padding: 80px 0;
+  background-color: #ffc41c;
+}
+
+.contact-message{
+  color: #0C223F;
+  font-size: 4.2rem;
+  padding-bottom: 32px;
+}
+
+.contact-email{
+  color: #0C223F;
+  font-size: 4.2rem;
+  color: #000000;
+}
+
+ /* --------------------------------
+ *          toppage link
+ *--------------------------------*/
+ .toppage-link{
+   background-color: #fcfcfc;
+   position: relative;
+   text-align: center;
+   height: 70px;
+ }
+ .toppage-link > a > .fas{
+   position: absolute;
+   font-size: 2.2rem;
+   color: #0C223F;
+   top: 50%;
+   left: 50%;
+   transform: translateY(-50%) translateX(-50%);
+ }
+
+/* --------------------------------
+ *          copyright
+ *--------------------------------*/
+.copyright{
+  padding: 32px 0;
+  text-align: center;
+  background-color: #0C223F;
+}
+
+.copyright > p{
+  font-size: 16px;
+  font-weight: bold;
+}
 
