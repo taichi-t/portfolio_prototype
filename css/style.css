@@ -21,6 +21,11 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
 h2{
     text-align: center;
     font-size: 4.2rem;
@@ -186,6 +191,22 @@ button:focus { outline:0; }
   height: 100%;
   text-transform: uppercase;
 }
+
+.midnightHeader.navy {
+  background: navy;
+  color: black;
+}
+.midnightHeader.white {
+  background: white;
+  color: black;
+}
+.midnightHeader.blue {
+  background: blue;
+  color: white;
+}
+
+
+
 /* sidemenu-left */
 
 /* sidemenu-right */
@@ -217,7 +238,7 @@ button:focus { outline:0; }
   font-size: 2.5rem;
   line-height: 2;
 }
-/* sidemenu-right */
+/* /sidemenu-right */
 
 
 /* --------------------------------

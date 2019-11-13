@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/1e1751db70.js"></script>
-
+    
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
 
-
+    
     <title>Hello, world!</title>
   </head>
   <body>
@@ -24,22 +24,24 @@
 *          navigation-selection           
 *                
 ---------------------------------------->
+
     <div class="sidemenu-left">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="sidemenu-list fixed">
+        <li id="menu-item1"><a href="#"><span>Home</span></a></li>
+        <li id="menu-item2"><a href="#"><span>Works</span></a></li>
+        <li id="menu-item3"><a href="#"><span>About</span></a></li>
+        <li id="menu-item4"><a href="#"><span>Contact</span></a></li>
       </ul>
     </div>
 
     <div class="sidemenu-right">
-      <ul>
+      <ul class="sidemenu-list">
           <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
           <li><a href="https://github.com/Doiverson" target="_blank"><i class='fab fa-github'></i></a></li>
           <li><a href="https://www.facebook.com/shosuke.doi" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
       </ul>
     </div>
+  
 <!--------------------------------------
 *
 *         /navigation-selection           
@@ -158,7 +160,7 @@
 *            about-selection           
 *                
 ---------------------------------------->
-<div class="container">
+<div class="container" data-midnight="navy">
 
   <!-- about-title -->
   <div class="row">
@@ -215,7 +217,7 @@
 <!-- what i can do-circle-graph-title -->
 
 <!-- what i can do-ciecle-graph -->
-<div class="container section-body">
+<div class="container section-body" data-midnight="navy">
     <div class="row">
       <div class="col-12">
         <h3 class="circle-title">Front End</h3>
@@ -321,7 +323,7 @@
   <div class="row contact">
     <div class="col-12 contact-text">
         <p class="contact-message">Drop me a line :)</p>
-        <p class="contact-email">t.tujioka.0925@gmail.com</p>
+        <a href="mailto:t.tujioka.0925&#64;gmail.com" class="contact-email">t.tujioka.0925&#64;gmail.com</a>
     </div>
   </div>
 
@@ -338,7 +340,7 @@
 *                
 ---------------------------------------->
 
-  <div class="row">
+  <div class="row" data-midnight="navy">
     <div class="col-12 toppage-link">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
@@ -384,7 +386,20 @@
   });
 });
     </script>
+
+    
+
+<script src="midnight.jquery.js"></script>
+<script>
+  // Start midnight
+  $(document).ready(function(){
+    // Change this to the correct selector for your nav.
+    $('').midnight();
+  });
+</script>
+    <script src="https://kit.fontawesome.com/1e1751db70.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/midnight.js@{version}/dist/midnight.jquery.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
