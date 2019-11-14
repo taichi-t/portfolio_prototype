@@ -36,9 +36,9 @@
 
     <div class="sidemenu-right">
       <ul class="sidemenu-list">
-          <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/Doiverson" target="_blank"><i class='fab fa-github'></i></a></li>
-          <li><a href="https://www.facebook.com/shosuke.doi" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><span class="drop-shadow"><i class="fab fa-linkedin-in"></i></span></a></li>
+          <li><a href="https://github.com/Doiverson" target="_blank"><span class="drop-shadow"><i class='fab fa-github'></i></span></a></li>
+          <li><a href="https://www.facebook.com/shosuke.doi" target="_blank"><span class="drop-shadow"><i class="fab fa-facebook-f"></i></span></a></li>
       </ul>
     </div>
   
@@ -53,7 +53,7 @@
 *          heroimg-selection           
 *                
 ---------------------------------------->
-<div class="row">
+<div class="row rellax">
 
   <div class="hero_imgBox">
       <p class="hero-lyer-text">
@@ -93,59 +93,80 @@
 ---------------------------------------->
 <!-- works1 -->
   <div class="row">
-    <div class="col-xs-6 works-image">
-      <img src="img/keyboard.jpg" alt="">
-    </div>
-    <div class="col-xs-6 works-text">
-      <div class="text-container">
-        <p class="works-title text-center">React made App using Unsplash API</p>
-        <p class="works-subtitle text-center">React.js</p>
-
-        <div class="button-container">
-            <button class="works-button"><span class="button-text">View more ...</span></button>
-        </div>
-
+      
+      <div class="col-xs-7 works-image">
+        <a href="#" class="works-image-link">
+          <img src="img/keyboard.jpg" alt="">
+        </a>
       </div>
-      <div class="triangle"></div>
-    </div>                
+
+      <div class="col-xs-3 works-text">
+
+      <a href="#" class="works-image-link">
+        <div class="text-container">
+          
+          <p class="works-title text-center">React made App using Unsplash API</p>
+          <p class="works-subtitle text-center">React.js</p>
+
+          <div class="button-container">
+              <button class="works-button" id="works-button">View more ...</button>
+        </div>
+      
+
+        </div>
+        <div class="triangle"></div>
+      </a> 
+      </div>      
+              
   </div>
 
 <!-- works2 -->
   <div class="row">
     <div class="col-xs-3 works-text-odd">
-      <div class="text-container">
-        <p class="works-title text-center works-title-odd">cafe's website</p>
-        <p class="works-subtitle text-center works-subtitle-odd">HTML/CSS/JavaSctipt</p>
-          
-        <div class="button-container">
-          <button class="works-button works-button-odd"><span class="button-text button-text-odd">View more ...</span></button>
-        </div>  
-      </div>
+      <a href="#" class="works-image-link">
+        <div class="text-container">
+          <p class="works-title text-center works-title-odd">cafe's website</p>
+          <p class="works-subtitle text-center works-subtitle-odd">HTML/CSS/JavaSctipt</p>
+            
+          <div class="button-container">
+            <button class="works-button-odd">View more ...</button>
+          </div>  
+        </div>
+      </a>
 
         <div class="triangle-odd"></div>
     </div>
 
     <div class="col-xs-7 works-image-odd">
-      <img src="img/coffeehouse.jpg" alt="">
+      <a href="#" class="works-image-link">
+        <img src="img/coffeehouse.jpg" alt="">
+      </a>
     </div>                
   </div>
 
 <!-- works3 -->
   <div class="row">
-    <div class="col-xs-6 works-image">
-      <img src="img/wordpress.jpg" alt="">
+
+    <div class="col-xs-7 works-image">
+
+      <a href="#" class="works-image-link">
+          <img src="img/wordpress.jpg" alt="">
+      </a>
+
     </div>
-    <div class="col-xs-6 works-text">
-      <div class="text-container">
-        <p class="works-title text-center">Word press made Blog</p>
-        <p class="works-subtitle text-center">PHP</p>
+    <div class="col-xs-3 works-text">
+      <a href="#" class="works-image-link">
+        <div class="text-container">
+          <p class="works-title text-center">Word press made Blog</p>
+          <p class="works-subtitle text-center">PHP</p>
 
-        <div class="button-container">
-            <button class="works-button"><span class="button-text">View more ...</span></button>
+          <div class="button-container">
+              <button class="works-button" id="works-button">View more ...</button>
+          </div>
+
         </div>
-
-      </div>
-      <div class="triangle"></div>
+        <div class="triangle"></div>
+      </a>
     </div>                
   </div>
 </div>
@@ -160,7 +181,7 @@
 *            about-selection           
 *                
 ---------------------------------------->
-<div class="container" data-midnight="navy">
+<div class="container">
 
   <!-- about-title -->
   <div class="row">
@@ -340,7 +361,7 @@
 *                
 ---------------------------------------->
 
-  <div class="row" data-midnight="navy">
+  <div class="row">
     <div class="col-12 toppage-link">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
@@ -373,32 +394,52 @@
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
-    <script>
-      $(function() {
-    $('.circle-graph').easyPieChart({
-    scaleColor: false,
-    lineWidth: 35,
-    lineCap: 'butt',
-    barColor: '#0C223F',
-    trackColor: '#AEC4E1' ,
-    size: 200,
-    animate: 900
+
+<script>
+$(function() {
+  $('.circle-graph').easyPieChart({
+  scaleColor: false,
+  lineWidth: 35,
+  lineCap: 'butt',
+  barColor: '#0C223F',
+  trackColor: '#AEC4E1' ,
+  size: 200,
+  animate: 900
   });
 });
-    </script>
-
-    
-
-<script src="midnight.jquery.js"></script>
-<script>
-  // Start midnight
-  $(document).ready(function(){
-    // Change this to the correct selector for your nav.
-    $('').midnight();
-  });
 </script>
-    <script src="https://kit.fontawesome.com/1e1751db70.js"></script>
+
+<!-- button hover action -->
+<script>
+ //マウスオーバーしたときの色を指定
+$(".works-image,.works-text").on("mouseover",function(){
+  console.log(".works-image,.works-text")
+    });
+
+//マウスアウトしたときに元の色に戻る
+$(".works-image").on("mouseout",function(){
+    $("#works-button").css({
+        color: "",
+        backgroundColor: ""
+    });
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script>
+<script>
+var rellax = new Rellax('.rellax', {
+  speed: -2,
+  center: false,
+  wrapper: null,
+  round: true,
+  vertical: true,
+  horizontal: false
+});
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     <!-- <script src="//cdn.jsdelivr.net/npm/midnight.js@{version}/dist/midnight.jquery.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
