@@ -26,7 +26,7 @@
 ---------------------------------------->
 
     <div class="sidemenu-left">
-      <ul class="sidemenu-list fixed">
+      <ul class="sidemenu-list">
         <li id="menu-item1"><a href="#"><span>Home</span></a></li>
         <li id="menu-item2"><a href="#"><span>Works</span></a></li>
         <li id="menu-item3"><a href="#"><span>About</span></a></li>
@@ -35,8 +35,8 @@
     </div>
 
     <div class="sidemenu-right">
-      <ul class="sidemenu-list">
-          <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><span class="drop-shadow"><i class="fab fa-linkedin-in"></i></span></a></li>
+      <ul class="sidemenu-list ">
+          <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><span class="drop-shadow"><i class="fixed fab fa-linkedin-in"></i></span></a></li>
           <li><a href="https://github.com/Doiverson" target="_blank"><span class="drop-shadow"><i class='fab fa-github'></i></span></a></li>
           <li><a href="https://www.facebook.com/shosuke.doi" target="_blank"><span class="drop-shadow"><i class="fab fa-facebook-f"></i></span></a></li>
       </ul>
@@ -183,7 +183,7 @@
 <div class="container">
 
   <!-- about-title -->
-  <div class="row">
+  <div class="row" data-midnight="white">
     <div class="col-xs-12 section-header section-header-first">
         <h2>About</h2>
     </div>
@@ -193,11 +193,11 @@
   <div class="row section-body">
       <div class="col">
           <div class="about-img ">
-            <img src="img/face.png" alt="" class="slide-left about-me" data-plugin-options='{"speed":500, "distance":40,"reverse":false}'>
+            <img src="img/face.png" alt="" class="slide-bottom1 about-me">
           </div>
       </div>
 
-      <div class="slide-right col text-content" data-plugin-options='{"speed":500, "distance":40, "reverse":false}'>
+      <div class="slide-bottom1 col text-content">
         <div class="about-text">
           <p>My name is “Taichi Tsujioka”. I’m a Japanese Front-end Developer, currently living in
             Vancouver, Canada. I’m really passionate about building and designing websites with
@@ -207,7 +207,7 @@
         </div>
 
         <div class="resume-button-container">
-            <button class="resume-button"><span class="button-text button-text-odd">Resume</span></button>
+            <button class="resume-button">Resume</button>
         </div>
       </div>  
    
@@ -237,7 +237,7 @@
 <!-- what i can do-circle-graph-title -->
 
 <!-- what i can do-ciecle-graph -->
-<div class="container section-body" data-midnight="navy">
+<div class="container section-body">
     <div class="row">
       <div class="col-12">
         <h3 class="circle-title">Front End</h3>
@@ -246,21 +246,21 @@
 
   <div class="row">
     <div class="col-4 circle-container">
-            <div class="slide-bottom circle-graph" data-percent="100" data-plugin-options='{"speed":300, "distance":50, "reverse":false}'><p>HTML</p></div>
+            <div class="slide-bottom2 circle-graph" data-percent="100"><p>HTML</p></div>
     </div>
 
     <div class="col-4 circle-container">
-            <div class="slide-bottom circle-graph" data-percent="90" data-plugin-options='{"speed":600, "distance":50, "reverse":false}'><p>CSS3</p></div>
+            <div class="slide-bottom2 circle-graph" data-percent="90"><p>CSS3</p></div>
     </div>
 
     <div class="col-4 circle-container">
-            <div class="slide-bottom circle-graph" data-percent="80" data-plugin-options='{"speed":1200, "distance":50, "reverse":false}'><p>JavaScript</p></div>
+            <div class="slide-bottom2 circle-graph" data-percent="80"><p>JavaScript</p></div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-4 offset-1 box1">
-      <div class="slide-bottom bar-graph-container" data-plugin-options='{"speed":500, "distance":50, "reverse":false}'>
+      <div class="slide-bottom2 bar-graph-container">
 
         <h3 class="bar-title">CMS/Frameworks</h3>
         
@@ -294,7 +294,7 @@
     </div>
 
     <div class="col-4 offset-2 box1">
-      <div class="slide-bottom bar-graph-container" data-plugin-options='{"speed":500, "distance":50, "reverse":false}'>
+      <div class="slide-bottom2 bar-graph-container" data-plugin-options='{"speed":500, "distance":50, "reverse":false}'>
 
         <h3 class="bar-title">Graphic Design</h3>
             
@@ -361,8 +361,12 @@
 ---------------------------------------->
 
   <div class="row">
-    <div class="col-12 toppage-link">
-      <a href="#"><i class="fas fa-arrow-up"></i></a>
+    <div class="col-12 toToppage">
+      <a href="" class="toppage-link" id="scroll">
+        <div>
+          <span class="up"><i class="fas fa-arrow-up"></i></span>
+        </div>
+      </a>
     </div>
   </div>
 
@@ -389,9 +393,7 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
 
 <script>
@@ -443,13 +445,31 @@ function(){$('#works-image-link2').removeClass('works-img-odd-hover');},
 );
 </script>
 
-<!-- fade this -->
-<script src="dist/jquery.fadethis.min.js"></script>
+<!-- scroll-animation -->
 <script>
-  $(window).fadeThis();
-  </script>
+$(function(){
+    $('#scroll').click(function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+    });
+});
+    </script>
 
+<!-- fade this -->
+<script src="js/scrollreveal.js"></script>
 <script>
+window.sr = ScrollReveal({ reset: false ,mobile: true});
+sr.reveal( '.slide-bottom1', { origin: 'bottom' , distance: '25%', duration: 800 , scale: 1.0, delay :400 ,opacity: 0,});
+window.sr = ScrollReveal({ reset: false ,mobile: true});
+sr.reveal( '.slide-bottom2', { origin: 'bottom' , distance: '30%', duration: 900 , scale: 1.0, delay :400 ,opacity: 0,});
+</script>
+
+<script src="js/midnight.jquery.js"></script>
+<script>
+$(document).ready(function(){
+  $('ul.fixed').midnight();
+});
+</script>
 
 
 <!-- palallax -->

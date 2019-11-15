@@ -81,6 +81,11 @@ button:focus { outline:0; }
 /* --------------------------------
  *          utility
  *--------------------------------*/
+
+ .midnightHeader.white {
+   background: none;
+   color: #0C223F;
+ }
  .wrap{
    margin: 0 17%;
  }
@@ -228,7 +233,6 @@ button:focus { outline:0; }
 }
 
 .sidemenu-right ul a {
-  color: #fcfcfc;
   display: inline-block;
   text-decoration: none;
   font-size: 2.5rem;
@@ -383,6 +387,7 @@ button:focus { outline:0; }
   -ms-transition: -ms-transform 0.3s linear;
   transition: transform 0.3s linear;
 }
+
 .works-img-odd-hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -575,16 +580,69 @@ button:focus { outline:0; }
 
 .resume-button-container{
   position: absolute;
+  background-color: #fcfcfc;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
+  padding: 0;
 }
 .resume-button{
+  position: relative;
+  display: inline-block;
+  z-index: 2;
   width: 200px;
-  height: 50px;
-  background-color: #fcfcfc;
+  height: 54px;
+  line-height: 4.8rem;
+  font-size: 1.4rem;
   border: 1px solid #0C223F; 
 }
+
+.resume-button::after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 4px;
+  left: 4px;
+  width: 190px;
+  height: 44px;
+  border: 1px solid #0C223F;
+  opacity: 0;
+}
+
+.resume-button:hover::after{
+  opacity: 1;
+}
+
+.resume-button,
+.resume-button::before,
+.resume-button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+
+/* .button {
+  position: absolute;
+  z-index: 2;
+  background-color: #fcfcfc;
+  border: 2px solid #333;
+  color: #333;
+  line-height: 48px;
+}
+.button::after {
+  top: 4px;
+  left: 4px;
+  width: 188px;
+  height: 42px;
+  border: 2px solid #333;
+  opacity: 0;
+}
+.button:hover::after {
+  opacity: 1;
+} */
 
  /* --------------------------------
  *          what i can do
@@ -726,7 +784,7 @@ button:focus { outline:0; }
 
 .contact{
   text-align: center;
-  padding: 80px 0;
+  padding: 56px 0;
   background-color: #ffc41c;
 }
 
@@ -745,20 +803,56 @@ button:focus { outline:0; }
  /* --------------------------------
  *          toppage link
  *--------------------------------*/
+
+ .toToppage{
+   padding: 0;
+ }
+ 
  .toppage-link{
-   background-color: #fcfcfc;
-   position: relative;
-   text-align: center;
-   height: 70px;
- }
- .toppage-link > a {
-  position: absolute;
+  position: relative;
+  display: block;
+  z-index: 2;
+  width: 100%;
+  height: 70px;
+  padding: 0;
+  background-color: #fcfcfc;
   color: #0C223F;
-  font-size: 2.2rem;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  font-size: 1.8rem;
+  line-height: 7rem;
+  text-align: center;
+  overflow: hidden;
  }
+
+
+ .toppage-link:hover {
+  color: #fcfcfc;
+}
+
+.toppage-link::before,
+.toppage-link::after{
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+  top: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.toppage-link:hover::after{
+  top: 0;
+  background-color: #0C223F;
+}
+
+.toppage-link,
+.toppage-link::before,
+.toppage-link::after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
 
 /* --------------------------------
  *          copyright
