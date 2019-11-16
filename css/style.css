@@ -82,7 +82,7 @@ button:focus { outline:0; }
  *          utility
  *--------------------------------*/
 
- .midnightHeader.white {
+ .midnightHeader.default{
    background: none;
    color: #0C223F;
  }
