@@ -3,12 +3,13 @@
  *--------------------------------*/
  
  html{
-	font-size: 62.5%;/*16px×62.5%=10px*/
+  font-size: 62.5%;/*16px×62.5%=10px*/
+  background-color:#0C223F;
 }
  
  
 body{
-  background-color: #fcfcfc;
+  
   font-family: 'Oswald', sans-serif;
   color: #fcfcfc;
   font-feature-settings: "palt";
@@ -17,8 +18,8 @@ body{
 
 
 a{
-  color: #fcfcfc;
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover{
@@ -59,6 +60,7 @@ button:focus { outline:0; }
 
 
 
+
 /*--------------------------------- section --------------------------------*/
 
 .section-header{
@@ -82,7 +84,7 @@ button:focus { outline:0; }
  *          utility
  *--------------------------------*/
 
- .midnightHeader.default{
+ .midnightHeader.white{
    background: none;
    color: #0C223F;
  }
@@ -165,8 +167,36 @@ button:focus { outline:0; }
  *          navigation
  *--------------------------------*/
 
+ .sidemenu-container{
+   position: fixed;
+   margin: 0 0 auto;
+   font-size: 2.4rem;
+   display: flex;
+   z-index: 999;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   align-items: right;
+   color: #fcfcfc;
+   text-transform: uppercase;
+   /* -webkit-transform : translate(-50%,-50%);
+   transform : translate(-50%,-50%); */
+ }
+
+
+.sidemenu-left{
+ text-align: right;
+ margin: 0 5%;
+}
+
+
+
+
+
+
 /* sidemenu-left */
-.sidemenu-left {
+
+
+/* .sidemenu-left {
   font-size: 2.5rem;
   text-shadow: 1px 1px 8px #444444;
   width: 100vh;
@@ -180,7 +210,7 @@ button:focus { outline:0; }
   z-index: 99;
 }
 
-.sidemenu-left ul {
+.sidemenu-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -190,32 +220,25 @@ button:focus { outline:0; }
   position: relative;
 }
 
-.sidemenu-left ul li {
+.sidemenu-left > nav > a {
   margin: 0 12.5px;
   list-style: none;
   height: 100%;
   text-transform: uppercase;
-}
+} */
 
-.midnightHeader.navy {
-  background: navy;
-  color: black;
-}
-.midnightHeader.white {
-  background: white;
-  color: black;
-}
-.midnightHeader.blue {
-  background: blue;
-  color: white;
-}
+
 
 
 
 /* sidemenu-left */
 
 /* sidemenu-right */
-.sidemenu-right {
+
+
+
+
+/* .sidemenu-right {
   right: 40px;
   top: 36%;
   position: fixed;
@@ -242,7 +265,7 @@ button:focus { outline:0; }
 .drop-shadow{
   -webkit-filter:drop-shadow(1px 1px 7px #444444);      
   filter:drop-shadow(1px 1px 7px #444444);
-}
+} */
 
 
 
@@ -888,4 +911,3 @@ button:focus { outline:0; }
   font-size: 16px;
   font-weight: bold;
 }
-

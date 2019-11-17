@@ -25,22 +25,12 @@
 *                
 ---------------------------------------->
 
-    <div class="sidemenu-left">
-      <ul class="sidemenu-list">
-        <li id="menu-item1"><a href="#"><span>Home</span></a></li>
-        <li id="menu-item2"><a href="#"><span>Works</span></a></li>
-        <li id="menu-item3"><a href="#"><span>About</span></a></li>
-        <li id="menu-item4"><a href="#"><span>Contact</span></a></li>
-      </ul>
-    </div>
+<ul class="sidemenu-container fixed">
+    <li class="sidemenu-left">
+        <a href="#"></a>
+    </li>
+</ul>
 
-    <div class="sidemenu-right">
-      <ul class="sidemenu-list">
-          <li><a href="https://www.linkedin.com/in/shovancouver/" target="_blank"><span class="drop-shadow"><i class="fixed fab fa-linkedin-in"></i></span></a></li>
-          <li><a href="https://github.com/Doiverson" target="_blank"><span class="drop-shadow"><i class='fab fa-github'></i></span></a></li>
-          <li><a href="https://www.facebook.com/shosuke.doi" target="_blank"><span class="drop-shadow"><i class="fab fa-facebook-f"></i></span></a></li>
-      </ul>
-    </div>
   
 <!--------------------------------------
 *
@@ -55,7 +45,7 @@
 ---------------------------------------->
 <div class="row rellax">
 
-  <div class="hero_imgBox rellax">
+  <div class="hero_imgBox">
       <p class="hero-lyer-text">
           I'm Taichi Tsujioka.<br>
           Japanese Front-end Developer,<br>
@@ -191,10 +181,10 @@
 *            about-selection           
 *                
 ---------------------------------------->
-<div class="container midnightHeader default">
+<div class="container" data-midnight="white">
 
   <!-- about-title -->
-  <div class="row" data-midnight="white">
+  <div class="row">
     <div class="col-xs-12 section-header section-header-first">
         <h2>About</h2>
     </div>
@@ -248,7 +238,7 @@
 <!-- what i can do-circle-graph-title -->
 
 <!-- what i can do-ciecle-graph -->
-<div class="container section-body">
+<div class="container section-body" data-midnight="white">
     <div class="row">
       <div class="col-12">
         <h3 class="circle-title">Front End</h3>
@@ -350,7 +340,7 @@
 *               contact          
 *                
 ---------------------------------------->
-<div class="container-fluid">
+<div class="container-fluid" data-midnight="white">
   <div class="row contact">
     <div class="col-12 contact-text">
         <p class="contact-message">Drop me a line :)</p>
@@ -371,7 +361,7 @@
 *                
 ---------------------------------------->
 
-  <div class="row">
+  <div class="row" data-midnight="white">
     <div class="col-12 toToppage">
       <a href="" class="toppage-link" id="scroll">
         <div>
@@ -392,7 +382,7 @@
 *            copyright         
 *                
 ---------------------------------------->
-  <div class="row">
+  <div class="row" data-midnight="white">
     <div class="col-12 copyright">
       <p>Taichi Tsujioka</p>
       <p>Copyright © 2019 Taichi Tsujioka, All Rights Reserved.</p>
@@ -481,7 +471,7 @@ sr.reveal( '.slide-bottom2', { origin: 'bottom' , distance: '30%', duration: 900
 // Start midnight
 $(document).ready(function(){
   // Change this to the correct selector.
-  $('ul.fixed').midnight();
+  $('.sidemenu-container.fixed').midnight();
 });
 </script>
 
